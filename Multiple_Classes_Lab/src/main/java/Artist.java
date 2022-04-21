@@ -7,6 +7,7 @@ public class Artist {
 
     public Artist(String name){
         this.name = name;
+        this.artworks = new ArrayList<Artwork>();
     }
 
     public String getName() {

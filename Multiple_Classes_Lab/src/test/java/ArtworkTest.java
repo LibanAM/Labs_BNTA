@@ -8,7 +8,7 @@ public class ArtworkTest {
 
     @BeforeEach
     public void setUp(){
-        artwork = new Artwork("Painting 1", "Ben", 100, 32);
+        artwork = new Artwork("Painting 1", "Mr.Painter", 100, 32);
     }
 
     @Test

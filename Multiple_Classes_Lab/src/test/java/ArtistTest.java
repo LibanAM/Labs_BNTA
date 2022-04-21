@@ -8,8 +8,8 @@ public class ArtistTest {
 
     @BeforeEach
     public void setUp(){
-        artist = new Artist("Ben");
-        artwork = new Artwork("Painting 1", "Ben", 400, 32);
+        artist = new Artist("Mr.Painter");
+        artwork = new Artwork("Painting 1", "Mr.Painter", 400, 32);
     }
 
     @Test
