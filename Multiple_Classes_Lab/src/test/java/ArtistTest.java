@@ -8,18 +8,19 @@ public class ArtistTest {
 
     @BeforeEach
     public void setUp(){
-        artist = new Artist("Mr.Painter");
-        picasso = new Artwork("Painting 1", "Mr.Painter", 400, 32);
+        artist = new Artist("Picasso");
+        picasso = new Artwork("Picasso 1", "Picasso", 100, 32);
     }
 
     @Test
     public void hasName(){
-        assertThat(artist.getName()).isEqualTo("Mr.Painter");
+        assertThat(artist.getName()).isEqualTo("Picasso");
     }
 
     @Test
     public void canAddArtworksToArtist(){
         artist.addArtwork(picasso);
+        assertThat(picasso.getArtist()).isEqualTo(artist.getName());
         assertThat(artist.getArtworks().size()).isEqualTo(1);
     }
 

@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Gallery {
     private String name;
-    private int till;
-    private ArrayList<Artwork> artworks;
+    private double till;
+    private List<Artwork> artworks;
 
-    public Gallery(String name){
+    public Gallery(String name, double till){
         this.name = name;
         this.till = 0;
         this.artworks = new ArrayList<Artwork>();
@@ -15,7 +16,7 @@ public class Gallery {
         return name;
     }
 
-    public int getTill() {
+    public double getTill() {
         return till;
     }
 
@@ -23,17 +24,21 @@ public class Gallery {
         this.artworks.add(artwork);
     }
 
-    public ArrayList<Artwork> getArtworks() {
+    public List<Artwork> getArtworks() {
         return artworks;
-    }
-
-    public void setTill(int amount) {
-        this.till = amount;
     }
 
     public void sellArtworks(Gallery galleries){
         for (Artwork artworks : galleries.getArtworks()){
             this.till += artworks.getPrice();
+        }
+    }
+
+    public void stockTake(Gallery gallery){
+        double stock_take;
+        for (Artwork artworks : gallery.getArtworks()){
+            stock_take += gallery.getArtworks().get(2);
+
         }
     }
 }

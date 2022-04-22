@@ -3,32 +3,32 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ArtworkTest {
-    Artwork artwork;
+    Artwork picasso;
 
 
     @BeforeEach
     public void setUp(){
-        artwork = new Artwork("Painting 1", "Mr.Painter", 100, 32);
+        picasso = new Artwork("Picasso 1", "Picasso", 100, 32);
     }
 
     @Test
     public void hasName(){
-        assertThat(artwork.getTitle()).isEqualTo("Painting 1");
+        assertThat(picasso.getTitle()).isEqualTo("Picasso 1");
     }
 
     @Test
     public void hasArtist(){
-        assertThat(artwork.getArtist()).isEqualTo("Mr.Painter");
+        assertThat(picasso.getArtist()).isEqualTo("Picasso");
     }
 
     @Test
     public void hasPrice(){
-        assertThat(artwork.getPrice()).isEqualTo(100);
+        assertThat(picasso.getPrice()).isEqualTo(100);
     }
 
     @Test
     public void hasNFT(){
-        assertThat(artwork.getNft()).isEqualTo(32);
+        assertThat(picasso.getNft()).isEqualTo(32);
     }
 
 }
