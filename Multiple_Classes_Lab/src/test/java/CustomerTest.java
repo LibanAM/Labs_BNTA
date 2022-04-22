@@ -4,10 +4,19 @@ import org.junit.jupiter.api.Test;
 
 public class CustomerTest {
     Customer customer;
+    Gallery gallery;
+    Artwork picasso;
+    Artwork vanGogh;
 
     @BeforeEach
     public void setUp(){
         customer = new Customer("Mr.Customer", 200);
+        gallery = new Gallery("London Gallery");
+        picasso = new Artwork("Picasso 1", "Picasso", 100, 32);
+        vanGogh = new Artwork("Van Gogh 1", "Van Gogh", 200, 16);
+        gallery.addArtwork(picasso);
+        gallery.addArtwork(vanGogh);
+
     }
 
     @Test
@@ -15,9 +24,15 @@ public class CustomerTest {
         assertThat(customer.getName()).isEqualTo("Mr.Customer");
     }
 
+//    @Test
+//    public void hasWallet(){
+//        assertThat(customer.getWallet()).isEqualTo(200);
+//    }
+
     @Test
-    public void hasWallet(){
-        assertThat(customer.getWallet()).isEqualTo(200);
+    public void canPurchaseArtwork(){
+        customer.purchaseArtworks(gallery);
+        assertThat(customer.getWallet()).isEqualTo(-300);
     }
 
 }

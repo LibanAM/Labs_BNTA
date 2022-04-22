@@ -4,7 +4,7 @@ public class Customer {
 
     public Customer(String name, int wallet){
         this.name = name;
-        this.wallet = wallet;
+        this.wallet = 0;
     }
 
     public String getName() {
@@ -13,6 +13,19 @@ public class Customer {
 
     public int getWallet() {
         return wallet;
+    }
+
+    public void setWallet(int amount) {
+        this.wallet = amount;
+    }
+
+    public void purchaseArtworks(Gallery galleries){
+        int totalWallet = 0;
+        int totalTill = 0;
+        for (Artwork artworks : galleries.getArtworks()){
+            this.wallet -= artworks.getPrice();
+            galleries.setTill(artworks.getPrice());
+        }
     }
 }
 

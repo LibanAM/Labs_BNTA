@@ -4,10 +4,12 @@ import org.junit.jupiter.api.Test;
 
 public class GalleryTest {
     Gallery gallery;
+    Artwork picasso;
 
     @BeforeEach
     public void setUp(){
-        gallery = new Gallery("London Gallery",400);
+        gallery = new Gallery("London Gallery");
+        picasso = new Artwork("Painting 1","Mr.Painter", 100, 32);
     }
 
     @Test
@@ -17,8 +19,23 @@ public class GalleryTest {
 
     @Test
     public void hasTill(){
-        assertThat(gallery.getTill()).isEqualTo(400);
+        assertThat(gallery.getTill()).isEqualTo(0);
     }
 
+    @Test
+    public void canAddArtworksToGallery(){
+        gallery.addArtwork(picasso);
+        assertThat(gallery.getArtworks().size()).isEqualTo(1);
+    }
 
+    @Test
+    public void canSetTill(){
+        gallery.setTill(100);
+        assertThat(gallery.getTill()).isEqualTo(100);
+    }
+
+//    @Test
+//    public void canAddArtwork(){
+//        assertThat(gallery.getGalleries().size()).isEqualTo(2);
+//    }
 }
