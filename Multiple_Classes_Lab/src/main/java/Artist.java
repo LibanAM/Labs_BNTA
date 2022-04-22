@@ -13,4 +13,12 @@ public class Artist {
     public String getName() {
         return name;
     }
+
+    public ArrayList<Artwork> getArtworks() {
+        return artworks;
+    }
+
+    public void addArtwork(Artwork artwork){
+        this.artworks.add(artwork);
+    }
 }

@@ -5,11 +5,13 @@ import org.junit.jupiter.api.Test;
 public class GalleryTest {
     Gallery gallery;
     Artwork picasso;
+    Artwork vanGogh;
 
     @BeforeEach
     public void setUp(){
         gallery = new Gallery("London Gallery");
-        picasso = new Artwork("Painting 1","Mr.Painter", 100, 32);
+        picasso = new Artwork("Picasso 1", "Picasso", 100, 32);
+
     }
 
     @Test
@@ -31,6 +33,13 @@ public class GalleryTest {
     @Test
     public void canSetTill(){
         gallery.setTill(100);
+        assertThat(gallery.getTill()).isEqualTo(100);
+    }
+
+    @Test
+    public void canSellArtwork(){
+        gallery.addArtwork(picasso);
+        gallery.sellArtworks(gallery);
         assertThat(gallery.getTill()).isEqualTo(100);
     }
 

@@ -4,17 +4,23 @@ import org.junit.jupiter.api.Test;
 
 public class ArtistTest {
     Artist artist;
-    Artwork artwork;
+    Artwork picasso;
 
     @BeforeEach
     public void setUp(){
         artist = new Artist("Mr.Painter");
-        artwork = new Artwork("Painting 1", "Mr.Painter", 400, 32);
+        picasso = new Artwork("Painting 1", "Mr.Painter", 400, 32);
     }
 
     @Test
     public void hasName(){
         assertThat(artist.getName()).isEqualTo("Mr.Painter");
+    }
+
+    @Test
+    public void canAddArtworksToArtist(){
+        artist.addArtwork(picasso);
+        assertThat(artist.getArtworks().size()).isEqualTo(1);
     }
 
 

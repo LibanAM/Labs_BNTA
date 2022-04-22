@@ -30,4 +30,10 @@ public class Gallery {
     public void setTill(int amount) {
         this.till = amount;
     }
+
+    public void sellArtworks(Gallery galleries){
+        for (Artwork artworks : galleries.getArtworks()){
+            this.till += artworks.getPrice();
+        }
+    }
 }

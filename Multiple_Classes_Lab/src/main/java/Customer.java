@@ -24,7 +24,6 @@ public class Customer {
         int totalTill = 0;
         for (Artwork artworks : galleries.getArtworks()){
             this.wallet -= artworks.getPrice();
-            galleries.setTill(artworks.getPrice());
         }
     }
 }
