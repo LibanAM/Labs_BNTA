@@ -48,11 +48,11 @@ public class GalleryTest {
 //        gallery.stockTake(gallery);
 //        assertThat(gallery);`
 
-    }
+}
 // --- Ignore ---
 
 //    @Test
 //    public void canAddArtwork(){
 //        assertThat(gallery.getGalleries().size()).isEqualTo(2);
 //    }
-}
+

@@ -15,10 +15,6 @@ public class Customer {
         return wallet;
     }
 
-    public void setWallet(int amount) {
-        this.wallet = amount;
-    }
-
     public void purchaseArtworks(Gallery galleries){
         for (Artwork artworks : galleries.getArtworks()){
             this.wallet -= artworks.getPrice();
