@@ -34,11 +34,11 @@ public class Gallery {
         }
     }
 
-    public void stockTake(Gallery gallery){
-        double stock_take;
-        for (Artwork artworks : gallery.getArtworks()){
-            stock_take += gallery.getArtworks().get(2);
-
-        }
-    }
+//    public void stockTake(Gallery gallery){
+//        double stock_take;
+//        for (Artwork artworks : gallery.getArtworks()){
+//            stock_take += gallery.getArtworks().get(2);
+//
+//        }
+//    }
 }

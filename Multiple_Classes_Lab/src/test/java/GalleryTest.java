@@ -43,10 +43,10 @@ public class GalleryTest {
 
 
 // --- Ignore ---
-    @Test
-    public void checkStockTake(){
-        gallery.stockTake(gallery);
-        assertThat(gallery);
+//`    @Test
+//    public void checkStockTake(){
+//        gallery.stockTake(gallery);
+//        assertThat(gallery);`
 
     }
 // --- Ignore ---
