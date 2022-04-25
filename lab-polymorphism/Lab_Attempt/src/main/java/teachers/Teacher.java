@@ -1,5 +1,7 @@
 package teachers;
 
+import schools.School;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,14 +10,20 @@ public abstract class Teacher {
     private int teacherId;
     private int age;
     private int salary;
+    protected School school;
     List<Teacher> teachers;
 
-    public Teacher(String name, int age, int teacherId, int salary) {
+    public Teacher(String name, int age, int teacherId, int salary, School employer) {
         this.name = name;
         this.age = age;
         this.teacherId = teacherId;
         this.salary = salary;
-        teachers = new ArrayList<>();
+        this.setSchool(employer);
+
+    }
+
+    public void setSchool(School employer){
+        this.school = employer;
     }
 
     public int getSalary() {
@@ -34,8 +42,6 @@ public abstract class Teacher {
         return age;
     }
 
-    public void addTeacher(Teacher teacher){
-        teachers.add(teacher);
-    }
+
 
 }

@@ -2,36 +2,54 @@ package teachers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import schools.School;
+import subjects.English;
 import subjects.Maths;
+import subjects.Physics;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class TeacherTest {
-    Teacher teacher;
+    School school;
+    Teacher teacher1;
 
 
     @BeforeEach
     public void setUp(){
-        teacher = new Maths("Mike Myers", 32, 10, 32000);
+        school = new School();
+        school.addTeacher(new Maths("Mike Myers", 32, 10, 32000, school));
+        school.addTeacher(new English("Jason Vorhees", 40, 20, 41000, school));
+        school.addTeacher(new Physics("Freddy Krueger", 38, 30, 45000, school));
+        teacher1 = school.getTeachers().get(0);
     }
 
     @Test
     public void hasName(){
-        assertThat(teacher.getName()).isEqualTo("Mike Myers");
+//        Teacher teacher1 = school.getTeachers().get(0);
+        assertThat(teacher1.getName()).isEqualTo("Mike Myers");
     }
 
     @Test
     public void hasAge(){
-        assertThat(teacher.getAge()).isEqualTo(32);
+//        Teacher teacher1 = school.getTeachers().get(0);
+        assertThat(teacher1.getAge()).isEqualTo(32);
     }
 
     @Test
     public void hasTeacherId(){
-        assertThat(teacher.getTeacherId()).isEqualTo(10);
+//        Teacher teacher1 = school.getTeachers().get(0);
+        assertThat(teacher1.getTeacherId()).isEqualTo(10);
     }
 
     @Test
     public void hasSalary(){
-        assertThat(teacher.getSalary()).isEqualTo(32000);
+//        Teacher teacher1 = school.getTeachers().get(0);
+        assertThat(teacher1.getSalary()).isEqualTo(32000);
     }
+
+    @Test
+    public void canAddTeachers(){
+        assertThat(school.getTeachers().size()).isEqualTo(3);
+    }
+
 }

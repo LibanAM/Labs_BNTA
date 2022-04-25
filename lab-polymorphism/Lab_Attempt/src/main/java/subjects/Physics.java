@@ -3,9 +3,9 @@ package subjects;
 import schools.School;
 import teachers.Teacher;
 
-public class English extends Teacher {
+public class Physics extends Teacher {
 
-    public English(String name, int age, int teacherId, int salary, School employer) {
+    public Physics(String name, int age, int teacherId, int salary, School employer) {
         super(name, age, teacherId, salary, employer);
     }
 }
