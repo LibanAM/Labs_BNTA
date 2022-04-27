@@ -9,13 +9,11 @@ public class Pair<K, V> {
     }
 
     public K getK() {
-        System.out.println(k);
         return k;
 
     }
 
     public V getV() {
-        System.out.println(v);
         return v;
     }
 
