@@ -3,7 +3,7 @@ package teachers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import schools.School;
-import subjects.English;
+import subjects.Languages;
 import subjects.Maths;
 import subjects.Physics;
 
@@ -17,9 +17,9 @@ public class TeacherTest {
     @BeforeEach
     public void setUp(){
         school = new School();
-        school.addTeacher(new Maths("Mike Myers", 32, 10, 32000, school));
-        school.addTeacher(new English("Jason Vorhees", 40, 20, 41000, school));
-        school.addTeacher(new Physics("Freddy Krueger", 38, 30, 45000, school));
+        school.addTeacher(new Maths("Mike Myers", 32, 10, 32000, "Maths", school));
+        school.addTeacher(new Languages("Jason Vorhees", 40, 20, 41000, "Languages", school));
+        school.addTeacher(new Physics("Freddy Krueger", 38, 30, 45000, "Physics", school));
         teacher1 = school.getTeachers().get(0);
     }
 

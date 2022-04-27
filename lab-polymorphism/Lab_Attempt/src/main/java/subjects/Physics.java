@@ -5,7 +5,11 @@ import teachers.Teacher;
 
 public class Physics extends Teacher {
 
-    public Physics(String name, int age, int teacherId, int salary, School employer) {
-        super(name, age, teacherId, salary, employer);
+    public Physics(String name, int age, int teacherId, int salary, String mainSubject, School employer) {
+        super(name, age, teacherId, salary, mainSubject, employer);
+    }
+
+    public String physicsWork(){
+        return "Teaching physics...";
     }
 }
