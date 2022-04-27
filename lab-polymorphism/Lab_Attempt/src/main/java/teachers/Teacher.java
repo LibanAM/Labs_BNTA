@@ -1,10 +1,7 @@
 package teachers;
 
 import schools.School;
-import weekdays.Weekday;
-
-import java.util.ArrayList;
-import java.util.List;
+import weekdays.Day;
 
 public abstract class Teacher {
     private String name;
@@ -23,6 +20,26 @@ public abstract class Teacher {
         this.mainSubject = mainSubject;
         this.setSchool(employer);
     }
+
+//    Day day = Day.MONDAY;
+//
+//    switch(day){
+//        case MONDAY:
+//            System.out.println("Monday, better get back to work!");
+//        case TUESDAY:
+//        case WEDNESDAY:
+//        case THURSDAY:
+//        case FRIDAY:
+//            System.out.println("It's a weekday!");
+//            break;
+//        case SATURDAY:
+//        case SUNDAY:
+//            System.out.println("It's the weekend!!!");
+//            break;
+//        default:
+//            System.out.println("None of that is true");
+//    }
+
 
     public void setSchool(School employer) {
         this.school = employer;

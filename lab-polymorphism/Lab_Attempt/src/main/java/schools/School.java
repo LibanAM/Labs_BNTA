@@ -13,6 +13,8 @@ public class School implements Schoolable {
         teachers = new ArrayList<>();
     }
 
+
+
     @Override
     public void addTeacher(Teacher teacher) {
         teachers.add(teacher);
