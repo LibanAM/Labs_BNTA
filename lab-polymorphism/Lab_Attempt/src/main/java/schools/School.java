@@ -9,10 +9,9 @@ import java.util.List;
 public class School implements Schoolable {
     List<Teacher> teachers;
 
-    public School(){
+    public School() {
         teachers = new ArrayList<>();
     }
-
 
 
     @Override

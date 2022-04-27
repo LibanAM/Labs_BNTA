@@ -9,7 +9,13 @@ public class Physics extends Teacher {
         super(name, age, teacherId, salary, mainSubject, employer);
     }
 
-    public String physicsWork(){
+    public String physicsWork() {
         return "Teaching physics...";
+    }
+
+    public String physicsWork(String marking) {
+        marking = "Marking physics...";
+        return marking;
+
     }
 }

@@ -31,5 +31,6 @@ public class LanguagesTest {
     @Test
     public void canAddLanguages(){
         assertThat(languages.getLanguages().size()).isEqualTo(1);
+        assertThat(languages.getLanguages().get(0)).isEqualTo("French");
     }
 }

@@ -12,4 +12,9 @@ public class Maths extends Teacher {
     public String mathsWork(){
         return "Teaching maths...";
     }
+
+    public String mathsWork(String marking){
+        marking = "Marking maths work...";
+        return marking;
+    }
 }
