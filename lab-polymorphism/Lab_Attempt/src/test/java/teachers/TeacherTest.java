@@ -7,12 +7,12 @@ import subjects.Languages;
 import subjects.Maths;
 import subjects.Physics;
 
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class TeacherTest {
     School school;
     Teacher teacher1;
-
 
     @BeforeEach
     public void setUp(){
@@ -52,4 +52,8 @@ public class TeacherTest {
         assertThat(school.getTeachers().size()).isEqualTo(3);
     }
 
+    @Test
+    public void canFindMainSubject(){
+        assertThat(teacher1.getMainSubject()).isEqualTo("Maths");
+    }
 }

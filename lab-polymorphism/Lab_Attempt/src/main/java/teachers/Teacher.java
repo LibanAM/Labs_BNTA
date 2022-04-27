@@ -44,5 +44,7 @@ public abstract class Teacher {
         return age;
     }
 
-
+    public String getMainSubject() {
+        return mainSubject;
+    }
 }
